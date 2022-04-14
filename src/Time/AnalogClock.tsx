@@ -74,16 +74,19 @@ function AnalogClock({
         if (hours12AndPm || hours24AndPM) {
           pickedHours += 12
         }
-        if (modeRef.current === 'AM' && pickedHours === 12) {
-          pickedHours = 0
-        }
+        
+        // Commented to be able to select 12 
+        
+        // if (modeRef.current === 'AM' && pickedHours === 12) {
+        //  pickedHours = 0
+        // }
 
-        if (
-          (!hours24 && modeRef.current === 'AM' && pickedHours === 12) ||
-          pickedHours === 24
-        ) {
-          pickedHours = 0
-        }
+        // if (
+        //  (!hours24 && modeRef.current === 'AM' && pickedHours === 12) ||
+        //  pickedHours === 24
+        // ) {
+        //  pickedHours = 0
+        // }
 
         if (hoursRef.current !== pickedHours || final) {
           onChangeRef.current({
